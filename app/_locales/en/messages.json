@@ -1,10 +1,13 @@
 {
   "appName": {
-    "message": "copy title",
-    "description": "The name of the application"
+    "message": "Reference copy",
+    "description": "Reference copy"
   },
   "appDescription": {
-    "message": "copy title with url",
+    "message": "Copy text with the page url info",
     "description": "The description of the application"
+  },
+  "contextMenuTitle": {
+    "message": "Copy reference"
   }
 }

@@ -1,6 +1,6 @@
 'use strict';
 
-const {contextMenus} = chrome;
+const {contextMenus, i18n} = chrome;
 
 function copyToClipboard (text) {
   const copyDiv = document.createElement('div');
@@ -19,8 +19,10 @@ function createLinkText (text, url) {
 }
 
 chrome.runtime.onInstalled.addListener(() => {
+  const contextMenuTitle = chrome.i18n.getMessage('contextMenuTitle');
+  
   contextMenus.create({
-    title: '引用复制',
+    title: contextMenuTitle,
     contexts: ['selection', 'page'],
     onclick: (info, tab) => {
       const {selectionText} = info;

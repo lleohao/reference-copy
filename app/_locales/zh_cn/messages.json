@@ -1,0 +1,13 @@
+{
+  "appName": {
+    "message": "引用复制",
+    "description": "引用复制"
+  },
+  "appDescription": {
+    "message": "复制网页内容时同时复制其网址",
+    "description": "复制网页内容时同时复制其网址"
+  },
+  "contextMenuTitle": {
+    "message": "引用复制"
+  }
+}
