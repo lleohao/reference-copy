@@ -1,6 +1,8 @@
 'use strict';
 
-const {contextMenus, i18n} = chrome;
+const {contextMenus} = chrome;
+
+let mode = 'default';
 
 function copyToClipboard (text) {
   const copyDiv = document.createElement('div');
@@ -43,3 +45,8 @@ chrome.runtime.onInstalled.addListener(() => {
     }
   });
 });
+
+chrome.storage.onChanged.addListener((changes, areaName) => {
+  console.log(changes, areaName);
+});
+
