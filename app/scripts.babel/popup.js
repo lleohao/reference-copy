@@ -1,14 +1,4 @@
 /**
- * 复制模式列表
- * @type {string[]}
- */
-const MODE = ['default', 'link', 'md', 'md-todo'];
-/**
- * 默认复制模式 index
- * @type {number}
- */
-const DEFAULT_MODE = 0;
-/**
  * active 元素的 class
  * @type {string}
  */
@@ -30,20 +20,31 @@ const liList = document.querySelectorAll('.item');
  * 初始化函数
  */
 function init () {
-  liList[DEFAULT_MODE].classList.add(ACTIVE_CLASS_NAME);
-  
-  // 绑定事件
-  wrapElm.addEventListener('click', function (e) {
-    const index = parseInt(e.target.dataset['index']);
-    
-    liList.forEach((item, _index) => {
-      if (index === _index) {
-        item.classList.add(ACTIVE_CLASS_NAME);
-      } else {
-        item.classList.remove(ACTIVE_CLASS_NAME);
-      }
+    chrome.storage.sync.get(['mode'], ({mode}) => {
+        if (mode === undefined) mode = 0;
+        
+        liList[mode].classList.add(ACTIVE_CLASS_NAME);
     });
-  });
+    
+    
+    // 绑定事件
+    wrapElm.addEventListener('click', function (e) {
+        const index = parseInt(e.target.dataset['index']);
+        if (index === undefined) return;
+        
+        liList.forEach((item, _index) => {
+            if (index === _index) {
+                item.classList.add(ACTIVE_CLASS_NAME);
+            } else {
+                item.classList.remove(ACTIVE_CLASS_NAME);
+            }
+        });
+        changeMode(index);
+    });
+}
+
+function changeMode (index) {
+    chrome.storage.sync.set({mode: index});
 }
 
 init();
