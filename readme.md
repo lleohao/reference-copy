@@ -28,7 +28,7 @@
 
 ## 设置
 
-![](http://ofwqfk202.bkt.clouddn.com/屏幕快照 2018-03-22 19.14.32.png)
+![设置截图](http://ofwqfk202.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-22%2019.14.32.png)
 
 1. 默认模式
 
