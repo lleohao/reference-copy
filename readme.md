@@ -1,27 +1,57 @@
 # 引用复制
 
-> 写这个插件的目的是解决 mac下面从网页复制内容至 onenote 中不能自动的将网址给复制
+> 复制网页内容时, 同时复制网址
+
+
 
 ## 安装方法
 
 > 由于一直没有解决 chrome store 的在线认证, 所以无法上架应用市场
 
-1. [下载地址](https://github.com/lleohao/reference-copy/releases/download/0.1.1/reference-copy.zip)
+1.  [下载地址](https://github.com/lleohao/reference-copy/releases/download/v1.0.0/reference-copy.zip)
 
-2. 解压下载后的文件
+2.  解压下载后的文件
 
-3. 开启 chrome 开发者模式
+3.  开启 chrome 开发者模式
     ![开启开发者模式](http://ofwqfk202.bkt.clouddn.com/reference-copy-1.jpg)
 
-4. 点击 `加载已解压的扩展程序`, 选择解压后的文件夹
+4.  点击 `加载已解压的扩展程序`, 选择解压后的文件夹
+
+
 
 ## 使用
 
-1. 网页任意位置打开右键菜单, 选择 `引用复制`, 这个模式将会复制网页的标题和网址
+1.  网页任意位置打开右键菜单, 选择 `引用复制`, 这个模式将会复制网页的标题和网址
+2.  在线中文本上打开右键菜单, 选择 `引用复制`, 这个模式将会复制选中的内容和网址
 
-2. 在线中文本上打开右键菜单, 选择 `引用复制`, 这个模式将会复制选中的内容和网址
 
-## 后续可能功能
 
-1. 添加复制成 markdown 模式
-2. 添加复制成 markdown checkbox 模式
+## 设置
+
+![](http://ofwqfk202.bkt.clouddn.com/屏幕快照 2018-03-22 19.14.32.png)
+
+1. 默认模式
+
+   ```
+   lleohao/reference-copy: chrome extension copy reference - https://github.com/lleohao/reference-copy
+   ```
+
+2. 链接模式 (复制到onenote等软件会自动转为超链接)
+
+   ```
+   <a href="https://github.com/lleohao/reference-copy">lleohao/reference-copy: chrome extension copy reference</a>
+   ```
+
+3. Markdown
+
+   ```
+   [lleohao/reference-copy: chrome extension copy reference](https://github.com/lleohao/reference-copy)
+   ```
+
+4. Markdown Todo
+
+   ```
+   - [ ] [lleohao/reference-copy: chrome extension copy reference](https://github.com/lleohao/reference-copy)
+   ```
+
+   ​
