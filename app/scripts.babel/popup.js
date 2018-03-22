@@ -20,10 +20,10 @@ const liList = document.querySelectorAll('.item');
  * 初始化函数
  */
 function init () {
-    chrome.storage.sync.get(['mode'], ({mode}) => {
-        if (mode === undefined) mode = 0;
+    chrome.storage.sync.get(['modeIndex'], ({modeIndex}) => {
+        if (modeIndex === undefined) mode = 0;
         
-        liList[mode].classList.add(ACTIVE_CLASS_NAME);
+        liList[modeIndex].classList.add(ACTIVE_CLASS_NAME);
     });
     
     
@@ -43,8 +43,8 @@ function init () {
     });
 }
 
-function changeMode (index) {
-    chrome.storage.sync.set({mode: index});
+function changeMode (modeIndex) {
+    chrome.storage.sync.set({modeIndex});
 }
 
 init();
